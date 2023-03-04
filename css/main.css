@@ -13,14 +13,7 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(218, 23%, 16%);
   width: 100%;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.advice__box {
-  overflow-x: hidden;
+  height: 100vh;
 }
 
 .container {
@@ -40,7 +33,7 @@ body {
 .heading--primary {
   font-size: 1.6rem;
   font-weight: 300;
-  color: rgb(82, 255, 168);
+  color: hsl(150, 100%, 66%);
   text-align: center;
   margin-top: 2rem;
   letter-spacing: 3px;
@@ -58,76 +51,44 @@ body {
   text-align: center;
 }
 
-.icon {
-  stroke: rgb(82, 255, 168);
-  display: inline-block;
+.des-divider,
+.mob-divider {
+  height: 1.6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .des-divider {
-  height: 1.6rem;
+  position: static;
   margin-bottom: 4.8rem;
   background: url(./../images/pattern-divider-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: -40px 0;
 }
 
 .mob-divider {
   display: none;
-  height: 1.6rem;
-  margin: 2rem 0;
-  width: 95%;
-  /* background-color: rgb(82, 255, 168); */
-  background-image: url(../images/pattern-divider-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 8px 0;
-}
-
-.btn__icon::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.1s;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
-}
-
-.btn__icon:hover {
-  cursor: pointer;
-}
-
-.btn__icon:hover::after {
-  transform: translateZ(-1px) scaleX(1.4) scaleY(1.4);
-  /* background-color: red !important; */
-  background: radial-gradient(circle, rgb(82, 255, 168) 0%, #afe5ca 71%, #e3f2eb 88%, rgba(255, 255, 255, 0.9960784314) 100%);
-  -webkit-transform: translateZ(-1px) scaleX(1.4) scaleY(1.4);
-  -moz-transform: translateZ(-1px) scaleX(1.4) scaleY(1.4);
-  -ms-transform: translateZ(-1px) scaleX(1.4) scaleY(1.4);
-  -o-transform: translateZ(-1px) scaleX(1.4) scaleY(1.4);
+  margin: 2rem 0;
+  background-image: url(../images/pattern-divider-mobile.svg);
 }
 
 .btn__icon {
   position: absolute;
   bottom: 0;
   right: 50%;
-  background-color: rgb(82, 255, 168);
+  background-color: hsl(150, 100%, 66%);
   border-radius: 50%;
   height: 5.2rem;
   width: 5.2rem;
-  padding: 1.33em;
-  z-index: 11;
+  padding: 1.33rem;
   transform: translate(50%, 50%);
-  transform-style: preserve-3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__icon {
+  box-shadow: 0px 0px 20px 5px hsl(150, 100%, 66%);
+  cursor: grab;
 }
 
 /* 
@@ -139,16 +100,24 @@ body {
   .container {
     width: 90%;
     margin: 12.8rem auto 0;
-    height: 35rem;
+    height: 38rem;
     padding: 1rem 3rem;
+  }
+  .heading--primary {
+    margin-top: 3.2rem;
   }
   .quote {
     font-size: 2.4rem;
+    margin-top: 1rem;
   }
   .mob-divider {
     display: block;
+    position: static;
+    margin-bottom: 1.6rem;
   }
   .des-divider {
     display: none;
+    position: static;
+    position: absolute;
   }
 }/*# sourceMappingURL=main.css.map */
